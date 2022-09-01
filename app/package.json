@@ -1,0 +1,50 @@
+{
+  "name": "nodemid",
+  "version": "1.0.0",
+  "description": "Mini-project \"Pointage\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index",
+    "test": "cross-env NODE_ENV=test jest --watchAll --runInBand --verbose --setupFiles dotenv/config",
+    "lint": "eslint . --fix"
+  },
+  "author": "Michael Ratefinjanahary",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.1",
+    "moment": "^2.29.1",
+    "sequelize": "^6.12.0-alpha.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.3.0",
+    "jest": "^27.4.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "quotes": [
+        "warn",
+        "single"
+      ],
+      "semi": "off"
+    }
+  }
+}
